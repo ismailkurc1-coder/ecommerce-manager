@@ -1,0 +1,81 @@
+Sale Date,Order ID,Buyer User ID,Full Name,Item Name,Quantity,Price,Coupon Code,Coupon Details,Discount Amount,Shipping Discount,Order Shipping,Order Sales Tax,Item Total,Currency,Transaction ID,Listing ID,Date Shipped,Ship City,Ship State,Ship Zipcode,Ship Country,Variations,Order Type,Tracking Number
+"Dec 17, 2025",3001000,buyer_98539,David Wilson,Custom Name Necklace - Gold,1,$34.50,,,$0.00,$0.00,$3.99,$2.76,$34.50,USD,T495673,1002,"Dec 18, 2025",Some City,CA,61926,JP,,completed,TRK173484571
+"Jan 17, 2026",3001001,buyer_92512,Robert Jones,Custom Pet Portrait Digital,1,$35.00,,,$0.00,$0.00,$3.99,$0.00,$35.00,USD,T853752,1010,"Jan 22, 2026",Some City,CA,32426,NL,,completed,TRK612725652
+"Jan 13, 2026",3001002,buyer_27121,Robert Clark,Digital Wedding Invitation,1,$12.99,,,$0.00,$0.00,$5.99,$1.04,$12.99,USD,T576460,1007,"Jan 14, 2026",Some City,CA,26872,AU,,completed,TRK750146508
+"Feb 15, 2026",3001003,buyer_51515,Emma Johnson,Vintage Style Leather Journal,1,$29.00,,,$2.90,$0.00,$3.99,$0.00,$29.00,USD,T143289,1003,"Feb 16, 2026",Some City,CA,71009,NL,,completed,TRK161749245
+"Dec 19, 2025",3001004,buyer_75791,John Davis,Personalized Family Portrait,2,$45.00,,,$0.00,$0.00,$3.99,$7.20,$90.00,USD,T930593,1004,"Dec 21, 2025",Some City,CA,37456,TR,,completed,TRK123530086
+"Jan 10, 2026",3001005,buyer_89662,Anna Smith,Custom Name Necklace - Gold,1,$34.50,,,$3.45,$0.00,$0.00,$3.45,$34.50,USD,T149889,1002,"Jan 11, 2026",Some City,CA,89053,AU,,completed,TRK332770971
+"Jan 04, 2026",3001006,buyer_87371,Emma Brown,Custom Name Necklace - Gold,1,$34.50,,,$3.45,$0.00,$0.00,$3.45,$34.50,USD,T335783,1002,"Jan 05, 2026",Some City,CA,27113,NL,,paid,TRK948672320
+"Jan 30, 2026",3001007,buyer_31331,David Johnson,Handmade Wooden Phone Stand,3,$24.99,,,$0.00,$0.00,$3.99,$0.00,$74.97,USD,T430867,1001,"Feb 01, 2026",Some City,CA,65603,JP,,completed,TRK807057498
+"Feb 06, 2026",3001008,buyer_10014,David Wilson,Handmade Wooden Phone Stand,1,$24.99,,,$0.00,$0.00,$5.99,$0.00,$24.99,USD,T633915,1001,"Feb 07, 2026",Some City,CA,29187,FR,,paid,TRK322679613
+"Dec 31, 2025",3001009,buyer_52169,Sarah Wilson,Resin Earrings - Floral,2,$15.50,,,$4.65,$0.00,$0.00,$2.48,$31.00,USD,T350382,1009,"Jan 05, 2026",Some City,CA,56619,DE,,completed,TRK685166855
+"Jan 06, 2026",3001010,buyer_83460,John Miller,Personalized Family Portrait,1,$45.00,,,$0.00,$0.00,$0.00,$0.00,$45.00,USD,T642897,1004,"Jan 11, 2026",Some City,CA,38981,US,,completed,TRK813023490
+"Nov 18, 2025",3001011,buyer_18271,John Williams,Vintage Style Leather Journal,1,$29.00,,,$2.90,$0.00,$0.00,$2.32,$29.00,USD,T560610,1003,"Nov 22, 2025",Some City,CA,46432,NL,,completed,TRK552403233
+"Dec 06, 2025",3001012,buyer_54633,David Williams,Ceramic Coffee Mug - Handmade,1,$18.00,,,$1.80,$0.00,$0.00,$1.44,$18.00,USD,T860717,1006,"Dec 11, 2025",Some City,CA,38668,AU,,paid,TRK189978732
+"Dec 22, 2025",3001013,buyer_88286,Anna Miller,Knitted Baby Blanket,2,$38.00,,,$11.40,$0.00,$5.99,$7.60,$76.00,USD,T787938,1008,"Dec 25, 2025",Some City,CA,21258,JP,,completed,TRK289403571
+"Nov 17, 2025",3001014,buyer_38081,Lisa Williams,Macrame Wall Hanging - Large,1,$55.00,,,$5.50,$0.00,$5.99,$0.00,$55.00,USD,T532650,1005,"Nov 18, 2025",Some City,CA,91165,NL,,completed,TRK269562694
+"Dec 08, 2025",3001015,buyer_14823,John Davis,Knitted Baby Blanket,1,$38.00,,,$0.00,$0.00,$7.99,$3.80,$38.00,USD,T210757,1008,"Dec 11, 2025",Some City,CA,27547,JP,,completed,TRK903572431
+"Jan 01, 2026",3001016,buyer_70663,Emma Clark,Custom Name Necklace - Gold,1,$34.50,,,$5.17,$0.00,$0.00,$0.00,$34.50,USD,T893870,1002,"Jan 03, 2026",Some City,CA,95774,IT,,completed,TRK928977097
+"Dec 23, 2025",3001017,buyer_83995,Robert Miller,Macrame Wall Hanging - Large,1,$55.00,,,$5.50,$0.00,$5.99,$5.50,$55.00,USD,T636085,1005,"Dec 25, 2025",Some City,CA,92916,US,,completed,TRK767628513
+"Jan 03, 2026",3001018,buyer_89638,Michael Williams,Custom Pet Portrait Digital,1,$35.00,,,$5.25,$0.00,$3.99,$3.50,$35.00,USD,T869879,1010,"Jan 07, 2026",Some City,CA,86433,TR,,completed,TRK936048865
+"Nov 28, 2025",3001019,buyer_81776,Michael Johnson,Digital Wedding Invitation,1,$12.99,,,$0.00,$0.00,$0.00,$1.04,$12.99,USD,T802023,1007,"Dec 02, 2025",Some City,CA,28389,FR,,completed,TRK694579801
+"Feb 08, 2026",3001020,buyer_45633,Michael Davis,Custom Pet Portrait Digital,3,$35.00,,,$0.00,$0.00,$0.00,$10.50,$105.00,USD,T646659,1010,"Feb 09, 2026",Some City,CA,50694,FR,,completed,TRK471373304
+"Nov 25, 2025",3001021,buyer_21674,Sarah Johnson,Resin Earrings - Floral,1,$15.50,,,$0.00,$0.00,$7.99,$0.00,$15.50,USD,T181382,1009,"Nov 30, 2025",Some City,CA,35162,NL,,completed,TRK267495531
+"Feb 15, 2026",3001022,buyer_99498,Michael Jones,Resin Earrings - Floral,1,$15.50,,,$0.00,$0.00,$0.00,$0.00,$15.50,USD,T270240,1009,"Feb 18, 2026",Some City,CA,70891,AU,,completed,TRK352653831
+"Jan 10, 2026",3001023,buyer_74893,Anna Taylor,Ceramic Coffee Mug - Handmade,1,$18.00,,,$0.00,$0.00,$7.99,$1.80,$18.00,USD,T839127,1006,"Jan 15, 2026",Some City,CA,99926,US,,paid,TRK384360868
+"Dec 10, 2025",3001024,buyer_77735,David Miller,Personalized Family Portrait,1,$45.00,,,$0.00,$0.00,$7.99,$0.00,$45.00,USD,T687111,1004,"Dec 11, 2025",Some City,CA,12225,CA,,paid,TRK841332758
+"Jan 09, 2026",3001025,buyer_61985,Robert Davis,Personalized Family Portrait,1,$45.00,,,$0.00,$0.00,$3.99,$0.00,$45.00,USD,T210966,1004,"Jan 14, 2026",Some City,CA,39591,UK,,completed,TRK152397638
+"Dec 30, 2025",3001026,buyer_15675,Robert Davis,Knitted Baby Blanket,3,$38.00,,,$0.00,$0.00,$5.99,$9.12,$114.00,USD,T274795,1008,"Dec 31, 2025",Some City,CA,36216,DE,,completed,TRK163173443
+"Dec 08, 2025",3001027,buyer_11711,David Smith,Handmade Wooden Phone Stand,3,$24.99,,,$7.50,$0.00,$3.99,$7.50,$74.97,USD,T656565,1001,"Dec 12, 2025",Some City,CA,64317,UK,,completed,TRK806070947
+"Jan 07, 2026",3001028,buyer_67532,John Wilson,Knitted Baby Blanket,2,$38.00,,,$11.40,$0.00,$7.99,$6.08,$76.00,USD,T858199,1008,"Jan 11, 2026",Some City,CA,79669,TR,,paid,TRK434885853
+"Dec 26, 2025",3001029,buyer_99041,Lisa Davis,Ceramic Coffee Mug - Handmade,1,$18.00,,,$0.00,$0.00,$5.99,$0.00,$18.00,USD,T686821,1006,"Dec 31, 2025",Some City,CA,64326,TR,,completed,TRK798090643
+"Jan 21, 2026",3001030,buyer_13872,Robert Johnson,Resin Earrings - Floral,1,$15.50,,,$1.55,$0.00,$7.99,$1.55,$15.50,USD,T950238,1009,"Jan 22, 2026",Some City,CA,53635,TR,,completed,TRK301927563
+"Jan 06, 2026",3001031,buyer_37795,Lisa Clark,Custom Name Necklace - Gold,1,$34.50,,,$0.00,$0.00,$0.00,$0.00,$34.50,USD,T838377,1002,"Jan 10, 2026",Some City,CA,65772,UK,,completed,TRK317426318
+"Feb 11, 2026",3001032,buyer_91890,Anna Taylor,Handmade Wooden Phone Stand,3,$24.99,,,$7.50,$0.00,$3.99,$7.50,$74.97,USD,T429012,1001,"Feb 13, 2026",Some City,CA,39978,FR,,completed,TRK576189247
+"Dec 16, 2025",3001033,buyer_73350,Sarah Wilson,Custom Pet Portrait Digital,2,$35.00,,,$0.00,$0.00,$3.99,$0.00,$70.00,USD,T544859,1010,"Dec 18, 2025",Some City,CA,29983,US,,paid,TRK962521128
+"Jan 26, 2026",3001034,buyer_32927,Emma Johnson,Custom Pet Portrait Digital,1,$35.00,,,$3.50,$0.00,$0.00,$0.00,$35.00,USD,T667139,1010,"Jan 27, 2026",Some City,CA,79719,AU,,completed,TRK231746555
+"Nov 19, 2025",3001035,buyer_99256,Sarah Miller,Custom Name Necklace - Gold,1,$34.50,,,$3.45,$0.00,$5.99,$3.45,$34.50,USD,T932398,1002,"Nov 23, 2025",Some City,CA,63044,JP,,paid,TRK697757555
+"Dec 30, 2025",3001036,buyer_49027,Maria Miller,Custom Name Necklace - Gold,3,$34.50,,,$10.35,$0.00,$0.00,$10.35,$103.50,USD,T662630,1002,"Dec 31, 2025",Some City,CA,21639,UK,,completed,TRK359537615
+"Jan 05, 2026",3001037,buyer_89749,John Wilson,Knitted Baby Blanket,1,$38.00,,,$0.00,$0.00,$3.99,$0.00,$38.00,USD,T480539,1008,"Jan 07, 2026",Some City,CA,86548,IT,,paid,TRK321857307
+"Jan 29, 2026",3001038,buyer_94554,Robert Miller,Macrame Wall Hanging - Large,2,$55.00,,,$0.00,$0.00,$5.99,$0.00,$110.00,USD,T439917,1005,"Feb 03, 2026",Some City,CA,32296,CA,,completed,TRK300354814
+"Jan 20, 2026",3001039,buyer_97933,Sarah Wilson,Resin Earrings - Floral,1,$15.50,,,$2.32,$0.00,$0.00,$1.55,$15.50,USD,T798558,1009,"Jan 22, 2026",Some City,CA,25814,IT,,paid,TRK736307067
+"Dec 03, 2025",3001040,buyer_29515,Michael Johnson,Resin Earrings - Floral,1,$15.50,,,$1.55,$0.00,$3.99,$1.24,$15.50,USD,T167287,1009,"Dec 08, 2025",Some City,CA,40066,IT,,paid,TRK814543923
+"Dec 04, 2025",3001041,buyer_32071,David Davis,Ceramic Coffee Mug - Handmade,2,$18.00,,,$0.00,$0.00,$5.99,$2.88,$36.00,USD,T937070,1006,"Dec 06, 2025",Some City,CA,33977,TR,,completed,TRK347570406
+"Dec 15, 2025",3001042,buyer_55381,David Taylor,Knitted Baby Blanket,1,$38.00,,,$3.80,$0.00,$3.99,$3.80,$38.00,USD,T373013,1008,"Dec 16, 2025",Some City,CA,27746,FR,,completed,TRK189855319
+"Jan 07, 2026",3001043,buyer_87948,Sarah Johnson,Personalized Family Portrait,2,$45.00,,,$0.00,$0.00,$3.99,$9.00,$90.00,USD,T594889,1004,"Jan 08, 2026",Some City,CA,41830,IT,,completed,TRK978656416
+"Jan 16, 2026",3001044,buyer_72025,Anna Clark,Ceramic Coffee Mug - Handmade,1,$18.00,,,$0.00,$0.00,$5.99,$0.00,$18.00,USD,T556591,1006,"Jan 18, 2026",Some City,CA,88592,AU,,completed,TRK642653051
+"Jan 25, 2026",3001045,buyer_86389,David Miller,Vintage Style Leather Journal,1,$29.00,,,$0.00,$0.00,$0.00,$2.90,$29.00,USD,T896327,1003,"Jan 27, 2026",Some City,CA,46915,AU,,completed,TRK852445666
+"Jan 05, 2026",3001046,buyer_99199,Maria Jones,Custom Name Necklace - Gold,1,$34.50,,,$5.17,$0.00,$5.99,$3.45,$34.50,USD,T382995,1002,"Jan 09, 2026",Some City,CA,21149,IT,,completed,TRK942921496
+"Feb 12, 2026",3001047,buyer_19823,Robert Clark,Personalized Family Portrait,2,$45.00,,,$9.00,$0.00,$3.99,$7.20,$90.00,USD,T275540,1004,"Feb 16, 2026",Some City,CA,67321,AU,,completed,TRK107479438
+"Dec 29, 2025",3001048,buyer_83114,Emma Smith,Personalized Family Portrait,1,$45.00,,,$0.00,$0.00,$3.99,$0.00,$45.00,USD,T217994,1004,"Jan 03, 2026",Some City,CA,44933,US,,paid,TRK389488923
+"Jan 28, 2026",3001049,buyer_91482,Sarah Williams,Resin Earrings - Floral,2,$15.50,,,$3.10,$0.00,$0.00,$0.00,$31.00,USD,T961220,1009,"Jan 30, 2026",Some City,CA,41764,US,,paid,TRK134138217
+"Nov 24, 2025",3001050,buyer_14233,James Jones,Macrame Wall Hanging - Large,1,$55.00,,,$0.00,$0.00,$3.99,$4.40,$55.00,USD,T339116,1005,"Nov 25, 2025",Some City,CA,77289,US,,completed,TRK355884859
+"Feb 11, 2026",3001051,buyer_43130,John Miller,Knitted Baby Blanket,1,$38.00,,,$0.00,$0.00,$5.99,$0.00,$38.00,USD,T215889,1008,"Feb 15, 2026",Some City,CA,93806,NL,,completed,TRK394473160
+"Dec 22, 2025",3001052,buyer_33182,Emma Johnson,Macrame Wall Hanging - Large,1,$55.00,,,$0.00,$0.00,$5.99,$4.40,$55.00,USD,T515441,1005,"Dec 27, 2025",Some City,CA,52707,AU,,completed,TRK184780604
+"Feb 07, 2026",3001053,buyer_66820,Maria Jones,Macrame Wall Hanging - Large,2,$55.00,,,$0.00,$0.00,$7.99,$0.00,$110.00,USD,T506916,1005,"Feb 11, 2026",Some City,CA,85366,NL,,completed,TRK616304802
+"Nov 19, 2025",3001054,buyer_74321,Lisa Wilson,Ceramic Coffee Mug - Handmade,1,$18.00,,,$1.80,$0.00,$7.99,$0.00,$18.00,USD,T113336,1006,"Nov 20, 2025",Some City,CA,57922,TR,,paid,TRK732226294
+"Dec 25, 2025",3001055,buyer_82911,Maria Jones,Ceramic Coffee Mug - Handmade,3,$18.00,,,$0.00,$0.00,$7.99,$0.00,$54.00,USD,T823167,1006,"Dec 30, 2025",Some City,CA,75230,DE,,completed,TRK437645155
+"Nov 24, 2025",3001056,buyer_37792,David Williams,Vintage Style Leather Journal,2,$29.00,,,$5.80,$0.00,$3.99,$5.80,$58.00,USD,T439826,1003,"Nov 27, 2025",Some City,CA,80199,UK,,completed,TRK148209596
+"Jan 28, 2026",3001057,buyer_42001,Sarah Williams,Knitted Baby Blanket,1,$38.00,,,$5.70,$0.00,$5.99,$3.04,$38.00,USD,T899032,1008,"Feb 01, 2026",Some City,CA,35583,AU,,paid,TRK592692935
+"Nov 30, 2025",3001058,buyer_36536,Emma Miller,Handmade Wooden Phone Stand,1,$24.99,,,$3.75,$0.00,$5.99,$0.00,$24.99,USD,T880339,1001,"Dec 03, 2025",Some City,CA,10178,UK,,paid,TRK276278195
+"Dec 07, 2025",3001059,buyer_51519,Robert Jones,Resin Earrings - Floral,1,$15.50,,,$0.00,$0.00,$0.00,$1.24,$15.50,USD,T143597,1009,"Dec 12, 2025",Some City,CA,11019,NL,,paid,TRK266267826
+"Jan 14, 2026",3001060,buyer_74697,Emma Taylor,Custom Pet Portrait Digital,1,$35.00,,,$0.00,$0.00,$3.99,$0.00,$35.00,USD,T829294,1010,"Jan 19, 2026",Some City,CA,98247,IT,,completed,TRK423962679
+"Jan 06, 2026",3001061,buyer_89858,David Williams,Resin Earrings - Floral,2,$15.50,,,$4.65,$0.00,$7.99,$2.48,$31.00,USD,T664486,1009,"Jan 09, 2026",Some City,CA,23579,US,,completed,TRK865209754
+"Dec 12, 2025",3001062,buyer_79936,Emma Wilson,Knitted Baby Blanket,3,$38.00,,,$0.00,$0.00,$3.99,$11.40,$114.00,USD,T159042,1008,"Dec 14, 2025",Some City,CA,27779,TR,,completed,TRK791531604
+"Jan 03, 2026",3001063,buyer_79140,Michael Williams,Custom Pet Portrait Digital,1,$35.00,,,$0.00,$0.00,$5.99,$0.00,$35.00,USD,T503931,1010,"Jan 08, 2026",Some City,CA,42956,US,,completed,TRK257658248
+"Jan 20, 2026",3001064,buyer_24913,David Davis,Digital Wedding Invitation,1,$12.99,,,$0.00,$0.00,$5.99,$0.00,$12.99,USD,T279556,1007,"Jan 22, 2026",Some City,CA,24053,UK,,paid,TRK907337309
+"Dec 17, 2025",3001065,buyer_90449,David Clark,Custom Pet Portrait Digital,1,$35.00,,,$0.00,$0.00,$0.00,$0.00,$35.00,USD,T675973,1010,"Dec 20, 2025",Some City,CA,52025,JP,,completed,TRK423235665
+"Dec 02, 2025",3001066,buyer_51720,John Wilson,Handmade Wooden Phone Stand,1,$24.99,,,$0.00,$0.00,$3.99,$0.00,$24.99,USD,T313294,1001,"Dec 07, 2025",Some City,CA,82627,FR,,paid,TRK562558853
+"Jan 29, 2026",3001067,buyer_24298,Lisa Wilson,Custom Name Necklace - Gold,2,$34.50,,,$10.35,$0.00,$5.99,$6.90,$69.00,USD,T168532,1002,"Jan 31, 2026",Some City,CA,11257,DE,,completed,TRK835357374
+"Feb 03, 2026",3001068,buyer_21519,Robert Johnson,Handmade Wooden Phone Stand,3,$24.99,,,$0.00,$0.00,$5.99,$6.00,$74.97,USD,T623954,1001,"Feb 07, 2026",Some City,CA,74455,UK,,completed,TRK212658334
+"Dec 11, 2025",3001069,buyer_66997,Maria Smith,Knitted Baby Blanket,1,$38.00,,,$5.70,$0.00,$0.00,$0.00,$38.00,USD,T887826,1008,"Dec 13, 2025",Some City,CA,18951,CA,,completed,TRK325667532
+"Jan 09, 2026",3001070,buyer_22219,Michael Clark,Vintage Style Leather Journal,1,$29.00,,,$0.00,$0.00,$7.99,$0.00,$29.00,USD,T862043,1003,"Jan 10, 2026",Some City,CA,27820,JP,,paid,TRK735121237
+"Dec 31, 2025",3001071,buyer_71317,James Wilson,Knitted Baby Blanket,2,$38.00,,,$11.40,$0.00,$5.99,$6.08,$76.00,USD,T188062,1008,"Jan 04, 2026",Some City,CA,87213,UK,,completed,TRK478994934
+"Jan 20, 2026",3001072,buyer_64064,Robert Williams,Vintage Style Leather Journal,1,$29.00,,,$4.35,$0.00,$7.99,$0.00,$29.00,USD,T617504,1003,"Jan 24, 2026",Some City,CA,91340,AU,,paid,TRK323280964
+"Dec 28, 2025",3001073,buyer_82837,Lisa Wilson,Custom Pet Portrait Digital,1,$35.00,,,$5.25,$0.00,$0.00,$0.00,$35.00,USD,T572970,1010,"Jan 01, 2026",Some City,CA,22680,IT,,paid,TRK996793992
+"Feb 13, 2026",3001074,buyer_32276,David Clark,Custom Pet Portrait Digital,1,$35.00,,,$0.00,$0.00,$0.00,$3.50,$35.00,USD,T555055,1010,"Feb 17, 2026",Some City,CA,80682,FR,,completed,TRK906898145
+"Dec 06, 2025",3001075,buyer_87211,Robert Wilson,Custom Pet Portrait Digital,1,$35.00,,,$0.00,$0.00,$3.99,$2.80,$35.00,USD,T979381,1010,"Dec 11, 2025",Some City,CA,49186,DE,,completed,TRK835107868
+"Jan 12, 2026",3001076,buyer_56788,John Miller,Personalized Family Portrait,1,$45.00,,,$0.00,$0.00,$3.99,$0.00,$45.00,USD,T668787,1004,"Jan 16, 2026",Some City,CA,65886,TR,,completed,TRK581468717
+"Jan 29, 2026",3001077,buyer_34464,Maria Brown,Resin Earrings - Floral,1,$15.50,,,$0.00,$0.00,$7.99,$0.00,$15.50,USD,T951340,1009,"Feb 03, 2026",Some City,CA,35138,NL,,paid,TRK165057470
+"Dec 28, 2025",3001078,buyer_44506,John Taylor,Resin Earrings - Floral,3,$15.50,,,$0.00,$0.00,$0.00,$0.00,$46.50,USD,T905797,1009,"Jan 02, 2026",Some City,CA,81061,IT,,paid,TRK743054031
+"Jan 12, 2026",3001079,buyer_99947,David Jones,Macrame Wall Hanging - Large,1,$55.00,,,$0.00,$0.00,$0.00,$5.50,$55.00,USD,T884998,1005,"Jan 14, 2026",Some City,CA,64712,UK,,completed,TRK459764035
