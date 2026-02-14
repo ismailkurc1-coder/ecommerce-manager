@@ -7,9 +7,9 @@ from collections import Counter, defaultdict
 from datetime import date, timedelta
 from typing import Optional
 
-from ecommerce_manager.models.order import Order, Platform
-from ecommerce_manager.models.product import Product
-from ecommerce_manager.models.store_summary import PeriodMetrics, ProductPerformance, StoreSummary
+from models.order import Order, Platform
+from models.product import Product
+from models.store_summary import PeriodMetrics, ProductPerformance, StoreSummary
 
 
 def calculate_period_metrics(

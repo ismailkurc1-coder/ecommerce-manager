@@ -1,2 +1,2 @@
-from ecommerce_manager.parsers.etsy_csv import parse_etsy_orders, parse_etsy_listings
-from ecommerce_manager.parsers.amazon_csv import parse_amazon_orders, parse_amazon_business_report
+from parsers.etsy_csv import parse_etsy_orders, parse_etsy_listings
+from parsers.amazon_csv import parse_amazon_orders, parse_amazon_business_report

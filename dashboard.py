@@ -12,22 +12,24 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-# Proje importları
+# Proje importları - hem lokal hem Streamlit Cloud'da çalışır
 PROJECT_ROOT = Path(__file__).resolve().parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 if str(PROJECT_ROOT.parent) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT.parent))
 
-from ecommerce_manager.config.settings import ETSY_DATA_DIR, AMAZON_DATA_DIR
-from ecommerce_manager.parsers.etsy_csv import parse_etsy_orders, parse_etsy_listings
-from ecommerce_manager.parsers.amazon_csv import parse_amazon_orders, parse_amazon_business_report
-from ecommerce_manager.engine.analyzer import (
+from config.settings import ETSY_DATA_DIR, AMAZON_DATA_DIR
+from parsers.etsy_csv import parse_etsy_orders, parse_etsy_listings
+from parsers.amazon_csv import parse_amazon_orders, parse_amazon_business_report
+from engine.analyzer import (
     build_store_summary,
     get_country_breakdown,
     get_daily_revenue,
     get_top_sellers,
     calculate_period_metrics,
 )
-from ecommerce_manager.models.order import Order, Platform
+from models.order import Order, Platform
 
 # ── Sayfa Ayarları ────────────────────────────────────────
 st.set_page_config(

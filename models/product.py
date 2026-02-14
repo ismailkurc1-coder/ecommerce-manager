@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional
 
-from .order import Platform
+from models.order import Platform
 
 
 class ProductStatus:

@@ -12,8 +12,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from ecommerce_manager.models.order import Order, OrderItem, OrderStatus, Platform
-from ecommerce_manager.models.product import Product
+from models.order import Order, OrderItem, OrderStatus, Platform
+from models.product import Product
 
 
 def _parse_date(date_str: str) -> Optional[datetime]:
