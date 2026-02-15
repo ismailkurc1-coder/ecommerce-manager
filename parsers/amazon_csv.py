@@ -29,7 +29,9 @@ def _parse_date(date_str: str) -> Optional[datetime]:
     ]
     for fmt in formats:
         try:
-            return datetime.strptime(date_str.strip(), fmt)
+            dt = datetime.strptime(date_str.strip(), fmt)
+            # Timezone bilgisini kaldır (naive datetime)
+            return dt.replace(tzinfo=None)
         except ValueError:
             continue
     return None

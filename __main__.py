@@ -26,6 +26,84 @@ def cmd_sample(args):
     generate()
 
 
+def cmd_report(args):
+    """Excel satış raporu oluşturur."""
+    from datetime import date
+    from config.settings import ETSY_DATA_DIR, AMAZON_DATA_DIR, REPORTS_DIR
+    from parsers.etsy_csv import parse_etsy_orders, parse_etsy_listings
+    from parsers.amazon_csv import parse_amazon_orders, parse_amazon_business_report
+    from writers.excel_report import generate_report
+
+    all_orders = []
+    all_products = []
+
+    for f in sorted(ETSY_DATA_DIR.glob("*[Oo]rder*.*sv")):
+        all_orders.extend(parse_etsy_orders(f))
+    for f in sorted(ETSY_DATA_DIR.glob("*[Ll]isting*.*sv")):
+        all_products.extend(parse_etsy_listings(f))
+    for f in sorted(AMAZON_DATA_DIR.glob("*[Oo]rder*.*")):
+        all_orders.extend(parse_amazon_orders(f))
+    for f in sorted(AMAZON_DATA_DIR.glob("*[Bb]usiness*.*sv")):
+        all_products.extend(parse_amazon_business_report(f))
+
+    if not all_orders:
+        print("Veri bulunamadi! Once 'sample' komutu calistirin.")
+        return
+
+    output = REPORTS_DIR / f"satis_raporu_{date.today().strftime('%Y%m%d')}.xlsx"
+    result = generate_report(
+        all_orders, all_products, output,
+        period_days=args.days, store_name=args.name,
+    )
+    print(f"\n  Rapor olusturuldu: {result}")
+    print(f"  Siparis sayisi: {len(all_orders)}")
+    print(f"  Urun sayisi: {len(all_products)}")
+
+
+def cmd_optimize(args):
+    """Listing SEO analizi ve optimizasyon önerileri."""
+    from config.settings import ETSY_DATA_DIR, AMAZON_DATA_DIR
+    from parsers.etsy_csv import parse_etsy_listings
+    from parsers.amazon_csv import parse_amazon_business_report
+    from optimizer.seo_scorer import score_listing
+    from optimizer.listing_optimizer import optimize_listing
+
+    all_products = []
+    for f in sorted(ETSY_DATA_DIR.glob("*[Ll]isting*.*sv")):
+        all_products.extend(parse_etsy_listings(f))
+    for f in sorted(AMAZON_DATA_DIR.glob("*[Bb]usiness*.*sv")):
+        all_products.extend(parse_amazon_business_report(f))
+
+    if not all_products:
+        print("Urun verisi bulunamadi!")
+        return
+
+    print(f"\n{'='*60}")
+    print(f"  LISTING SEO ANALIZI - {len(all_products)} urun")
+    print(f"{'='*60}\n")
+
+    scores = []
+    for p in all_products:
+        s = score_listing(p)
+        scores.append((p, s))
+
+    # Skorlara göre sırala
+    scores.sort(key=lambda x: x[1].total_score)
+
+    for p, s in scores:
+        print(f"  [{s.grade}] {s.total_score:3d}/100  {p.platform.value.upper():6s}  {p.title[:45]}")
+        for issue in s.issues:
+            icon = "!!" if issue.severity == "critical" else "!" if issue.severity == "warning" else "i"
+            print(f"        [{icon}] {issue.message}")
+        print()
+
+    avg = sum(s.total_score for _, s in scores) / len(scores)
+    print(f"{'─'*60}")
+    print(f"  Ortalama SEO Skoru: {avg:.0f}/100")
+    print(f"  Iyi (70+): {sum(1 for _, s in scores if s.total_score >= 70)}")
+    print(f"  Zayif (<40): {sum(1 for _, s in scores if s.total_score < 40)}")
+
+
 def cmd_analyze(args):
     """Mağaza verilerini analiz eder ve özet gösterir."""
     from config.settings import ETSY_DATA_DIR, AMAZON_DATA_DIR
@@ -158,7 +236,10 @@ def main():
 
     sub.add_parser("sample", help="Ornek veri olustur")
     sub.add_parser("analyze", help="Verileri analiz et")
-    sub.add_parser("report", help="Excel rapor olustur (yakin zamanda)")
+    report_parser = sub.add_parser("report", help="Excel rapor olustur")
+    report_parser.add_argument("--days", type=int, default=30, help="Rapor donemi (gun)")
+    report_parser.add_argument("--name", type=str, default="Magaza", help="Magaza adi")
+    sub.add_parser("optimize", help="Listing SEO analizi ve optimizasyonu")
 
     args = parser.parse_args()
 
@@ -167,7 +248,9 @@ def main():
     elif args.command == "analyze":
         cmd_analyze(args)
     elif args.command == "report":
-        print("Rapor modulu yakin zamanda eklenecek.")
+        cmd_report(args)
+    elif args.command == "optimize":
+        cmd_optimize(args)
     else:
         parser.print_help()
 

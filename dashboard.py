@@ -30,6 +30,8 @@ from engine.analyzer import (
     calculate_period_metrics,
 )
 from models.order import Order, Platform
+from optimizer.seo_scorer import score_listing
+from optimizer.listing_optimizer import optimize_listing, optimize_listing_ai
 
 # ── Sayfa Ayarları ────────────────────────────────────────
 st.set_page_config(
@@ -76,7 +78,7 @@ def main():
 
         page = st.radio(
             "Sayfa",
-            ["Ana Panel", "Ürün Performansı", "Uyarılar & Öneriler"],
+            ["Ana Panel", "Ürün Performansı", "Listing Optimizer", "Uyarılar & Öneriler"],
             index=0,
         )
 
@@ -115,6 +117,8 @@ def main():
         render_main_dashboard(filtered_orders, filtered_products, period_days, platform_filter)
     elif page == "Ürün Performansı":
         render_product_performance(filtered_orders, filtered_products)
+    elif page == "Listing Optimizer":
+        render_optimizer(filtered_orders, filtered_products)
     elif page == "Uyarılar & Öneriler":
         render_alerts(filtered_orders, filtered_products, period_days)
 
@@ -485,6 +489,137 @@ def render_alerts(orders, products, period_days):
         st.success("Tebrikler! Mağazanızda acil uyarı bulunmuyor.")
     else:
         st.warning(f"Toplam **{alert_count}** uyarı dikkatinizi bekliyor.")
+
+
+# ══════════════════════════════════════════════════════════
+#  LISTING OPTIMIZER
+# ══════════════════════════════════════════════════════════
+def render_optimizer(orders, products):
+    st.title("Listing Optimizer")
+
+    if not products:
+        st.warning("Ürün verisi bulunamadı.")
+        return
+
+    # ── Tüm Ürünlerin SEO Skoru ───────────────────────────
+    st.subheader("SEO Skor Tablosu")
+
+    scores = []
+    for p in products:
+        s = score_listing(p)
+        scores.append(s)
+
+    # Ortalama skor
+    avg_score = sum(s.total_score for s in scores) / len(scores) if scores else 0
+
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Ortalama SEO Skoru", f"{avg_score:.0f}/100")
+    with col2:
+        good_count = sum(1 for s in scores if s.total_score >= 70)
+        st.metric("İyi Listing (70+)", f"{good_count}/{len(scores)}")
+    with col3:
+        bad_count = sum(1 for s in scores if s.total_score < 40)
+        st.metric("Zayıf Listing (<40)", bad_count)
+
+    # Skor tablosu
+    score_data = []
+    for s in sorted(scores, key=lambda x: x.total_score):
+        score_data.append({
+            "Not": s.grade,
+            "Skor": s.total_score,
+            "Platform": s.platform.value.upper(),
+            "Ürün": s.title[:45],
+            "Başlık": f"{s.title_score}/25",
+            "Tag": f"{s.tags_score}/25",
+            "Açıklama": f"{s.description_score}/25",
+            "Etkileşim": f"{s.engagement_score}/25",
+            "Sorun Sayısı": len(s.issues),
+        })
+    st.dataframe(score_data, use_container_width=True, hide_index=True)
+
+    # Skor dağılımı grafiği
+    fig_scores = px.bar(
+        x=[s.title[:20] for s in sorted(scores, key=lambda x: x.total_score)],
+        y=[s.total_score for s in sorted(scores, key=lambda x: x.total_score)],
+        color=[s.grade for s in sorted(scores, key=lambda x: x.total_score)],
+        color_discrete_map={"A": "#4CAF50", "B": "#8BC34A", "C": "#FFC107", "D": "#FF9800", "F": "#F44336"},
+        labels={"x": "Ürün", "y": "SEO Skoru", "color": "Not"},
+    )
+    fig_scores.update_layout(height=350, margin=dict(l=20, r=20, t=20, b=80), xaxis_tickangle=-45)
+    st.plotly_chart(fig_scores, use_container_width=True)
+
+    # ── Ürün Seçip Detaylı Optimizasyon ───────────────────
+    st.divider()
+    st.subheader("Ürün Optimizasyonu")
+
+    product_names = [f"{p.platform.value.upper()} | {p.title[:50]}" for p in products]
+    selected_idx = st.selectbox("Ürün seçin:", range(len(products)), format_func=lambda i: product_names[i])
+
+    selected_product = products[selected_idx]
+    selected_score = scores[selected_idx]
+
+    col_score, col_detail = st.columns([1, 2])
+
+    with col_score:
+        # Skor kartı
+        grade_colors = {"A": "green", "B": "blue", "C": "orange", "D": "red", "F": "red"}
+        grade_color = grade_colors.get(selected_score.grade, "red")
+        st.markdown(f"### SEO Skoru: :{grade_color}[{selected_score.total_score}/100 ({selected_score.grade})]")
+
+        st.write(f"- Başlık: **{selected_score.title_score}/25**")
+        st.write(f"- Tag'ler: **{selected_score.tags_score}/25**")
+        st.write(f"- Açıklama: **{selected_score.description_score}/25**")
+        st.write(f"- Etkileşim: **{selected_score.engagement_score}/25**")
+
+    with col_detail:
+        # Sorunlar
+        if selected_score.issues:
+            st.markdown("### Tespit Edilen Sorunlar")
+            for issue in selected_score.issues:
+                if issue.severity == "critical":
+                    st.error(f"**{issue.message}** — {issue.suggestion}")
+                elif issue.severity == "warning":
+                    st.warning(f"**{issue.message}** — {issue.suggestion}")
+                else:
+                    st.info(f"{issue.message} — {issue.suggestion}")
+
+    # Optimizasyon önerileri
+    st.divider()
+    if st.button("Optimizasyon Önerilerini Getir", type="primary"):
+        with st.spinner("Analiz ediliyor..."):
+            result = optimize_listing_ai(selected_product)
+
+        st.markdown(f"### {'AI' if result.ai_powered else 'Kural Bazlı'} Optimizasyon Önerileri")
+
+        # Başlık
+        st.markdown("#### Önerilen Başlık")
+        st.code(result.suggested_title, language=None)
+        st.caption(f"Orijinal: {result.original_title}")
+
+        if result.title_tips:
+            st.markdown("**Başlık İpuçları:**")
+            for tip in result.title_tips:
+                st.write(f"- {tip}")
+
+        # Tag'ler
+        if result.suggested_tags:
+            st.markdown("#### Önerilen Tag'ler")
+            tag_cols = st.columns(3)
+            for i, tag in enumerate(result.suggested_tags):
+                with tag_cols[i % 3]:
+                    st.code(tag, language=None)
+
+        # Açıklama
+        if result.suggested_description:
+            st.markdown("#### Önerilen Açıklama Şablonu")
+            st.text_area("Açıklama", result.suggested_description, height=300)
+
+        # Genel ipuçları
+        if result.general_tips:
+            st.markdown("#### Genel Öneriler")
+            for tip in result.general_tips:
+                st.write(f"- {tip}")
 
 
 if __name__ == "__main__":
