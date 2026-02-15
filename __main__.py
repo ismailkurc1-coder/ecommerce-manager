@@ -104,6 +104,26 @@ def cmd_optimize(args):
     print(f"  Zayif (<40): {sum(1 for _, s in scores if s.total_score < 40)}")
 
 
+def cmd_scrape(args):
+    """Etsy/Amazon'da rakip araması yapar."""
+    keyword = args.keyword
+    platform = args.platform
+    pages = args.pages
+
+    print(f"\n  Aranıyor: '{keyword}' | Platform: {platform} | Sayfa: {pages}")
+    print(f"  Lutfen bekleyin, bot korumasina takilmamak icin yavas taranıyor...\n")
+
+    if platform in ("etsy", "both"):
+        from scraper.etsy_scraper import search_etsy, print_search_report as print_etsy
+        report = search_etsy(keyword, max_pages=pages)
+        print_etsy(report)
+
+    if platform in ("amazon", "both"):
+        from scraper.amazon_scraper import search_amazon, print_search_report as print_amazon
+        report = search_amazon(keyword, max_pages=pages)
+        print_amazon(report)
+
+
 def cmd_analyze(args):
     """Mağaza verilerini analiz eder ve özet gösterir."""
     from config.settings import ETSY_DATA_DIR, AMAZON_DATA_DIR
@@ -240,6 +260,10 @@ def main():
     report_parser.add_argument("--days", type=int, default=30, help="Rapor donemi (gun)")
     report_parser.add_argument("--name", type=str, default="Magaza", help="Magaza adi")
     sub.add_parser("optimize", help="Listing SEO analizi ve optimizasyonu")
+    scrape_parser = sub.add_parser("scrape", help="Rakip arama ve analizi")
+    scrape_parser.add_argument("keyword", help="Aranacak kelime")
+    scrape_parser.add_argument("--platform", choices=["etsy", "amazon", "both"], default="both", help="Platform")
+    scrape_parser.add_argument("--pages", type=int, default=1, help="Kac sayfa taranacak")
 
     args = parser.parse_args()
 
@@ -251,6 +275,8 @@ def main():
         cmd_report(args)
     elif args.command == "optimize":
         cmd_optimize(args)
+    elif args.command == "scrape":
+        cmd_scrape(args)
     else:
         parser.print_help()
 
